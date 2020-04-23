@@ -6,6 +6,7 @@ public class Student {
     String firstName;
     int age;
     int course;
+    boolean pass;
 
     public String getName() {
         return name;
@@ -15,9 +16,7 @@ public class Student {
         this.name = name;
     }
 
-    public String getLastName() {
-        return lastName;
-    }
+    public String getLastName() { return lastName; }
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
@@ -54,8 +53,6 @@ public class Student {
     public void setPass(boolean pass) {
         this.pass = pass;
     }
-
-    boolean pass;
 
     public Student(){}
     public Student(String name, int age){

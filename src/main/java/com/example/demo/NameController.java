@@ -11,18 +11,17 @@ import java.util.ArrayList;
 
 @EnableAutoConfiguration
 @RestController
-public class NameController extends HttpServlet {
-    String rez = "";
-    ArrayList<Student> list = new ArrayList<Student>();
+public class NameController {
+    ArrayList<Student> list = new ArrayList<>();
 
-    @RequestMapping(value = "/names/players/add", method = RequestMethod.POST)
+    @RequestMapping(value = "/names/students/add", method = RequestMethod.PUT)
     public Student putStudent(@RequestBody Student student){
         list.add(student);
         System.out.println("Добавлен студент " + student.name);
         return student;
     }
 
-    @RequestMapping("/names/players/list")
+    @RequestMapping("/names/students/list")
     public ArrayList<Student> getStudents(){
         return list;
     }
